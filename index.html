@@ -15,7 +15,7 @@
 </head>
 <body>
 <h1>Privacy Policy — AiBrainly</h1>
-<p class="muted">Last updated: 25 September 2026</p>
+<p class="muted">Last updated: 5 October 2026</p>
 
 <p>AiBrainly ("the app", "we", "us") is an AI-assisted journaling and self-reflection app. This policy explains what information the app collects, how it is used, and the choices you have. By using AiBrainly you agree to this policy.</p>
 
@@ -28,12 +28,16 @@
   <li><strong>Content you create</strong> — your journal entries, moods, decisions, chat messages with the AI, and the AI-generated insights and long-term "memory" profile derived from them. This content can be personal and sensitive; you choose what to write.</li>
   <li><strong>Your preferences</strong> — such as your chosen name and coaching style.</li>
   <li><strong>Purchase information</strong> — if you subscribe to AiBrainly Premium, payment is handled entirely by Google Play. We never see your card or payment details. We receive and store your subscription status (plan, renewal and expiry dates) and a purchase token from Google Play, linked to your account, to unlock Premium and keep it in sync.</li>
+  <li><strong>Connection information</strong> — if you choose to connect an AI assistant (see below), we store your account identifier, the name of the assistant, the connection and last-used dates, and a hashed (not readable) access token.</li>
   <li><strong>Diagnostics &amp; usage</strong> — crash reports and basic usage/analytics events, used to keep the app stable and improve it.</li>
 </ul>
 <p>The app does <strong>not</strong> collect your location, does not access your camera or contacts, does not access your microphone unless you tap the voice-typing button (see below), and does not sell your data.</p>
 
 <h2>Voice typing (microphone)</h2>
 <p>If you tap the microphone button in the journal writer to dictate, AiBrainly asks for microphone permission and uses your device's built-in speech recognition to turn your speech into text. AiBrainly does not record, store or upload your audio; it only receives the resulting text, which is treated like anything else you type. Depending on your device settings, your phone's speech service (for example Google's) may process the audio to produce that text, under that provider's own privacy policy. Voice typing is optional and you can revoke the microphone permission at any time in your device settings.</p>
+
+<h2>Connecting AI assistants (optional)</h2>
+<p>You can optionally connect an AI assistant such as Claude so that it can add entries to your AiBrainly journal when you ask it to. To connect, you sign in to your AiBrainly account and approve the connection. The assistant receives a limited access token that lets it <strong>add new journal entries only</strong>. It <strong>cannot read, search, edit or delete</strong> your existing entries, insights or memory. Entries added this way are limited to 3 per 24 hours and 4,000 characters each, and are stored in your account like any other entry (labelled with the assistant that added it). The text you ask an assistant to save passes through that assistant's provider (for example Anthropic for Claude, OpenAI for ChatGPT) under their own privacy policy before it reaches AiBrainly; those providers are not our service providers for this feature. You can disconnect any assistant at any time in <strong>Settings &rarr; Connect AI tools</strong>, which immediately revokes its access. Deleting your account deletes all connections and tokens.</p>
 
 <h2>How your content is processed by AI</h2>
 <p>To generate insights, coaching responses, and your memory profile, your relevant content is sent securely to our backend (Google Firebase Cloud Functions) and then to third-party AI providers — <strong>OpenAI</strong> and <strong>Anthropic</strong> — solely to generate a response for you. These providers process the content on our behalf as service providers. We do not use your content to train third-party models, and API providers state that data sent via their APIs is not used to train their models by default.</p>
@@ -54,7 +58,7 @@
 <p>We share data only with the service providers needed to run the app: Google Firebase (hosting, auth, database, analytics, crash reporting), Google Play (subscription billing) and the AI providers named above (content processing). We do not sell personal data or share it for advertising.</p>
 
 <h2>Data retention &amp; deletion</h2>
-<p>Your content is retained while your account is active. You can delete individual entries in the app (a "Recently deleted" area lets you restore or permanently remove them). To delete your entire account and associated data, contact <strong>ranjithstar256@gmail.com</strong> and we will process the deletion.</p>
+<p>Your content is retained while your account is active. You can delete individual entries in the app (a "Recently deleted" area lets you restore or permanently remove them). To delete your entire account and all associated data (entries, insights, chats, memory, subscription records and AI-assistant connections), use <strong>Settings &rarr; Privacy &amp; Data &rarr; Delete account</strong> in the app, or contact <strong>ranjithstar256@gmail.com</strong> and we will process the deletion.</p>
 
 <h2>Children</h2>
 <p>AiBrainly is not directed to children under 13, and we do not knowingly collect data from them.</p>
