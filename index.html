@@ -15,7 +15,7 @@
 </head>
 <body>
 <h1>Privacy Policy — AiBrainly</h1>
-<p class="muted">Last updated: 9 October 2026</p>
+<p class="muted">Last updated: 10 October 2026</p>
 
 <p>AiBrainly ("the app", "we", "us") is an AI-assisted journaling and self-reflection app. This policy explains what information the app collects, how it is used, and the choices you have. By using AiBrainly you agree to this policy.</p>
 
@@ -28,9 +28,9 @@
   <li><strong>Content you create</strong> — your journal entries, moods, decisions, chat messages with the AI, and the AI-generated insights and long-term "memory" profile derived from them. This content can be personal and sensitive; you choose what to write.</li>
   <li><strong>Your preferences</strong> — such as your chosen name and coaching style.</li>
   <li><strong>Purchase information</strong> — if you subscribe to AiBrainly Premium, payment is handled entirely by Google Play. We never see your card or payment details. We receive and store your subscription status (plan, renewal and expiry dates) and a purchase token from Google Play, linked to your account, to unlock Premium and keep it in sync.</li>
+  <li><strong>Diagnostics &amp; usage</strong> — crash reports and basic usage/analytics events, used to keep the app stable and improve it.</li>
   <li><strong>Connection information</strong> — if you choose to connect an AI assistant (see below), we store your account identifier, the name of the assistant, the connection and last-used dates, and a hashed (not readable) access token.</li>
   <li><strong>Terms acceptance</strong> — when you accept the Terms and this Privacy Policy, we store the version you accepted and the date and time, linked to your account, as a record of your agreement.</li>
-  <li><strong>Diagnostics &amp; usage</strong> — crash reports and basic usage/analytics events, used to keep the app stable and improve it.</li>
 </ul>
 <p>The app does <strong>not</strong> collect your location, does not access your camera or contacts, does not access your microphone unless you tap the voice-typing button (see below), and does not sell your data.</p>
 
@@ -41,10 +41,24 @@
 <p>You can optionally connect an AI assistant such as Claude so that it can add entries to your AiBrainly journal when you ask it to. To connect, you sign in to your AiBrainly account and approve the connection. The assistant receives a limited access token that lets it <strong>add new journal entries only</strong>. It <strong>cannot read, search, edit or delete</strong> your existing entries, insights or memory. Entries added this way are limited to 3 per 24 hours and 4,000 characters each, and are stored in your account like any other entry (labelled with the assistant that added it). The text you ask an assistant to save passes through that assistant's provider (for example Anthropic for Claude, OpenAI for ChatGPT) under their own privacy policy before it reaches AiBrainly; those providers are not our service providers for this feature. You can disconnect any assistant at any time in <strong>Settings &rarr; Connect AI tools</strong>, which immediately revokes its access. Deleting your account deletes all connections and tokens.</p>
 
 <h2>How your content is processed by AI</h2>
-<p>To generate insights, coaching responses, and your memory profile, your relevant content is sent securely to our backend (Google Firebase Cloud Functions) and then to third-party AI providers — <strong>OpenAI</strong> and <strong>Anthropic</strong> — solely to generate a response for you. These providers process the content on our behalf as service providers. We do not use your content to train third-party models, and API providers state that data sent via their APIs is not used to train their models by default.</p>
+<p>To generate insights, coaching responses, and your memory profile, your relevant content is sent securely to our backend (Google Firebase Cloud Functions) and then to third-party AI providers — <strong>OpenAI</strong> and <strong>Anthropic</strong> — solely to generate a response for you. These providers process the content on our behalf as service providers. We do not use your content to train third-party models, and under their API terms OpenAI and Anthropic do not use data sent through their APIs to train their models by default. These providers may keep API requests for a limited period (currently up to 30 days) for abuse monitoring and safety, then delete them. We have not signed zero-data-retention agreements with them. Your content is not anonymised before it is sent, because the AI needs your actual words to write a useful reply.</p>
 
-<h2>Where your data is stored</h2>
-<p>Your account and content are stored in Google Firebase (Authentication and Cloud Firestore) under industry-standard encryption in transit and at rest. Access is restricted to your authenticated account.</p>
+<h2>Premium features that read your journal (optional, off until you turn them on)</h2>
+<p><strong>Ask my journal</strong> (Premium) lets you ask questions about your past entries. If you turn it on, your entries are sent to OpenAI to create a searchable copy of each entry (an "embedding"), which is stored in your account, and the entries that best match your question are sent to OpenAI with the question to write the answer. <strong>Monthly letter</strong> (Premium) sends your entries from the previous month to OpenAI once a month to write a private letter, which is saved in your account. Neither feature sends anything until you allow it, separately for each feature, in a prompt inside the app. You can turn either off at any time in Settings &rarr; Privacy &amp; Data, which stops the processing and deletes the stored searchable copies (Ask my journal) or your saved letters (Monthly letter). They are also deleted when you delete your account. We keep a record of your choice (which feature, the version of this explanation and the time).</p>
+<p><strong>Premium preview.</strong> Until 30 November 2026 (IST) every user gets Premium features free of charge. This does not change how your data is handled: the features that read your journal still send nothing until you turn them on.</p>
+
+<h2>Where your data is stored, and what that means for privacy</h2>
+<p>Your account and content are stored in Google Firebase (Authentication and Cloud Firestore), encrypted in transit and at rest. Other users cannot read your entries: our database rules allow only your signed-in account to read them.</p>
+<p><strong>AiBrainly is not end-to-end encrypted.</strong> Your entries are stored in a form our servers can read, because the AI features need to read your text to write replies. This means the person who runs AiBrainly could technically open your data in the database. We do not do that, and we limit and record access as described next. If you are not comfortable with that, please do not write anything in the app that you would not want an AI service to process.</p>
+
+<h2>Who can access your data</h2>
+<ul>
+  <li><strong>We do not read your journal.</strong> Access to the production database is limited to the app's owner accounts and recorded in audit logs.</li>
+  <li>We will open your content only to (a) fix a technical problem or answer a support request that you sent us, (b) investigate a safety or security issue, or (c) comply with a legal obligation.</li>
+  <li>Our automated backend services read your content only to run the features you use (for example, to send it to the AI providers described above).</li>
+  <li>Our logs and analytics contain technical events (for example, "entry saved" and the mood you chose), not the text of your entries.</li>
+</ul>
+
 
 <h2>How we use your information</h2>
 <ul>
@@ -59,7 +73,10 @@
 <p>We share data only with the service providers needed to run the app: Google Firebase (hosting, auth, database, analytics, crash reporting), Google Play (subscription billing) and the AI providers named above (content processing). We do not sell personal data or share it for advertising.</p>
 
 <h2>Data retention &amp; deletion</h2>
-<p>Your content is retained while your account is active. You can delete individual entries in the app (a "Recently deleted" area lets you restore or permanently remove them). To delete your entire account and all associated data (entries, insights, chats, memory, subscription records and AI-assistant connections), use <strong>Settings &rarr; Privacy &amp; Data &rarr; Delete account</strong> in the app, or contact <strong>ranjithstar256@gmail.com</strong> and we will process the deletion.</p>
+<p>Your content is retained while your account is active. You can delete individual entries in the app (a "Recently deleted" area lets you restore or permanently remove them). You can delete your whole account and everything associated with it (entries, insights, chats, memory, saved letters, searchable copies, and connected AI-tool access) in the app under Settings → Privacy &amp; Data. If you cannot use the app, email <strong>ranjithstar256@gmail.com</strong> and we will delete it for you. After deletion, encrypted database backups can keep a copy for up to 30 days before they are erased, and we do not restore or read them in that time except to recover from a system failure. Records that contain no journal content, such as anonymous crash reports and usage counts, may be kept.</p>
+
+<h2>Your rights: access, correction and erasure</h2>
+<p>You can see and edit your entries in the app, export them from Settings &rarr; Privacy &amp; Data, and delete entries or your whole account at any time. You can also email <strong>ranjithstar256@gmail.com</strong> to ask for a copy of your personal data, to have it corrected, or to have it erased. We will reply as soon as we can and within 30 days. If you have a complaint about how we handle your data, write to the same address.</p>
 
 <h2>Children</h2>
 <p>AiBrainly is not directed to children under 13, and we do not knowingly collect data from them.</p>
